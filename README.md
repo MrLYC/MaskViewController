@@ -35,3 +35,4 @@ maskController.delegate = self;
 //  3.显示
 [maskController show];
 ```
+雕虫小技，且看且不喷。
