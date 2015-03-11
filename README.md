@@ -3,7 +3,7 @@
 通过自定义contentView内容层，适用于临时气泡弹窗等。
 
 ###优势
-* 相比UIPopoverController，独有随时随地可以show的优势（类似UIAlertView）不用指定加载某层view，也不需要从vc present。
+* 相比UIPopoverController，独有随时随地可以show的优势（类似UIAlertView）不用指定加在某层view上，也不需要从vc present。
 * 提供以下四种使用场景类型，根据不同的使用需求可以进行设置。
 ```objc
 typedef NS_ENUM(NSUInteger, MMaskControllerType) {
