@@ -16,6 +16,11 @@
 
 @implementation ViewController
 
+- (void)loadView {
+    self.view = [[MyView alloc] initWithFrame:CGRectMake(0, 0, 500, 500)];
+    self.view.backgroundColor = [UIColor grayColor];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -37,7 +42,7 @@
                                                                   withContentView:view
                                                                         animation:YES
                                                                     contentCenter:YES
-                                                                        delayTime:3];
+                                                                        delayTime:2];
     //  3.设置代理。*注意*：消失回调中 [maskController release], 生命周期结束，类似于popoverController
     maskController.delegate = self;
     
