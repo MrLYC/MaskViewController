@@ -28,19 +28,26 @@
 }
 
 - (void)butAC {
+    //  1.初始化contentView
     UIView *view = [[MyView alloc] initWithFrame:CGRectMake(100, 50, 300, 200)];
     view.backgroundColor = [UIColor redColor];
     
+    //  2.初始化maskController
     MMaskController *maskController = [[MMaskController alloc] initMaskController:MMaskControllerDelayDismiss
                                                                   withContentView:view
                                                                         animation:YES
                                                                     contentCenter:YES
                                                                         delayTime:3];
+    //  3.设置代理。*注意*：消失回调中 [maskController release], 生命周期结束，类似于popoverController
     maskController.delegate = self;
+    
+    //  4.显示
     [maskController show];
     [view release];
 }
 
+#pragma mark -
+#pragma mark - MMaskControllerDelegate
 - (void)maskControllerDidDismiss:(MMaskController *)maskController {
     [maskController release];
     maskController = nil;
