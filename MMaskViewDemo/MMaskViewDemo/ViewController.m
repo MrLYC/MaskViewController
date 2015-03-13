@@ -2,7 +2,7 @@
 //  ViewController.m
 //  MMaskViewDemo
 //
-//  Created by 马权 on 3/9/15.
+//  Created by 马屌 on 3/9/15.
 //  Copyright (c) 2015 maquan. All rights reserved.
 //
 
